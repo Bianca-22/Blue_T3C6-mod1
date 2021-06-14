@@ -1,0 +1,89 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled5.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyN3ra+t69PJoLZNEJlsyN+W",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Bianca-22/Blue_T3C6-mod1/blob/main/Jogo%20Detetive\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "exRk6uPGbEQk",
+        "outputId": "b37034b5-8883-49ba-d4af-c46809675eb1"
+      },
+      "source": [
+        "print('-='*17)\n",
+        "print('******** JOGO DO DETETIVE ********')\n",
+        "print('-='*17)\n",
+        "print()\n",
+        "\n",
+        "n1 = input('Você telefonou para a vítima?[S/N] ').lower().replace('s','1').replace('n','0')[0]\n",
+        "n2 = input('Você esteve no local do crime?[S/N] ').lower().replace('s','1').replace('n','0')[0]\n",
+        "n3 = input('Você mora perto da vítima?[S/N] ').lower().replace('s','1').replace('n','0')[0]\n",
+        "n4 = input('Você devia para a vítima?[S/N] ').lower().replace('s','1').replace('n','0')[0]\n",
+        "n5 = input('Você trabalhou com a vítima?[S/N] ').lower().replace('s','1').replace('n','0')[0]\n",
+        "print()\n",
+        "resultado = int(n1)+int(n2)+int(n3)+int(n4)+int(n5)\n",
+        "\n",
+        "if resultado == 2:\n",
+        "  print('Você é suspeito.')\n",
+        "elif resultado == 3 or resultado == 4:\n",
+        "  print('Você é Cúmplice.')\n",
+        "elif resultado == 5:\n",
+        "  print('Você é o assassino.')\n",
+        "elif resultado < 2:\n",
+        "  print('Você é inocente.')\n",
+        "else:\n",
+        "  print('Resposta inválida')\n",
+        "print()"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n",
+            "******** JOGO DO DETETIVE ********\n",
+            "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n",
+            "\n",
+            "Você telefonou para a vítima?[S/N] s\n",
+            "Você esteve no local do crime?[S/N] s\n",
+            "Você mora perto da vítima?[S/N] s\n",
+            "Você devia para a vítima?[S/N] s\n",
+            "Você trabalhou com a vítima?[S/N] n\n",
+            "\n",
+            "Você é Cúmplice.\n",
+            "\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
